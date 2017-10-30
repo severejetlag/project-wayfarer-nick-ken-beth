@@ -1,14 +1,16 @@
-var mongoose = require('mongoose');
-var Scheman = mongoonse.Schema;
-var User = require('./user');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-var PostSchema = new Schema ({
-  postTitle: String;
-  postContent: String;
-  postDate: String;
-  postCreator: [ String ];
+const PostSchema = new Schema ({
+	title: String,
+	content: String,
+  	date: { type: Date, default: Date.now },
+  	_userId: {
+	    type: Schema.Types.ObjectId,
+	    ref: 'User'
+  	},
 })
 
-var PostSchema = mongoose.model('Post', CommentSchema);
+const Post = mongoose.model('Post', PostSchema);
 
 module.exports = Post;
