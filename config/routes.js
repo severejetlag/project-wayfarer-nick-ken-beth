@@ -27,10 +27,7 @@ router.route('/')
 router.route('/signup')
 	.post(controllers.auth.signup)
 
-
-// app.post('/login', passport.authenticate('local'), function (req, res) {
-//   console.log(JSON.stringify(req.user));
-//   res.send(req.user);
-// });
+// router.route('/login')
+// 	.post(controllers.auth.login)
 
 module.exports = router;

@@ -40,6 +40,11 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.post('/login', passport.authenticate('local'), function (req, res) {
+  console.log(JSON.stringify(req.user));
+  res.send(req.user);
+});
+
 // Use Config routes to move them out of Server.js
 const routes = require("./config/routes");
 app.use(routes);
