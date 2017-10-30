@@ -143,6 +143,10 @@ header {
   vertical-align: middle;
 }
 
+.editicon:hover {
+  cursor:pointer;
+}
+
 .profileBody-right {
   display: inline-block;
   width: 20%;
@@ -150,7 +154,6 @@ header {
   vertical-align: middle;
 }
 .personalIcon{
-  position: relative;
   display: inline-block;
   max-height: 100%;
   max-width: 100%;
@@ -161,6 +164,10 @@ header {
   height: 15px;
   display: inline-block;
   vertical-align: bottom;
+}
+
+.personalEditicon:hover {
+  cursor:pointer;
 }
 
 .posts {
