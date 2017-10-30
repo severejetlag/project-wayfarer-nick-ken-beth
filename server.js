@@ -1,17 +1,33 @@
-var express = require('express'),
+const express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     cookieParser = require('cookie-parser'),
     session = require('express-session'),
     passport = require('passport'),
-    LocalStrategy = require('passport-local').Strategy;
+    LocalStrategy = require('passport-local').Strategy,
+    db = require('./models');
 
-var app = express();
+//to config API to use body body-parser and look for JSON in req.body
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
 
-const routes = require("./config/routes");
+app.use(cookieParser());
+app.use(session({
+  secret: 'supersecret', // change this!
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
-app.use(routes);
+//passport config
+passport.use(new LocalStrategy(db.User.authenticate()));
+passport.serializeUser(db.User.serializeUser());
+passport.deserializeUser(db.User.deserializeUser());
+
 
 //Prevent CORS errors
 app.use(function (req, res, next) {
@@ -24,7 +40,11 @@ app.use(function (req, res, next) {
   next();
 });
 
-var port = process.env.API_PORT || 3001;
+// Use Config routes to move them out of Server.js
+const routes = require("./config/routes");
+app.use(routes);
+
+const port = process.env.API_PORT || 3001;
 app.listen(port, function() {
     console.log(`api running on ${port}`);
 });

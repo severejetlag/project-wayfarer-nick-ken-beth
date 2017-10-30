@@ -4,4 +4,5 @@ module.exports = {
   users: require('./usersController'),
   posts: require('./postsController'),
   comments: require('./commentsController'),
+  auth: require('./authController')
 }
