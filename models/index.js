@@ -1,11 +1,11 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/galavant', {useMongoClient: true});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/galavant', {useMongoClient: true});
 
-var City = require('./city');
-var Comment = require('./comment');
-var Post = require('./post');
-var User = require('./user');
+const City = require('./city');
+const Comment = require('./comment');
+const Post = require('./post');
+const User = require('./user');
 
 module.exports = {
   City: City,
