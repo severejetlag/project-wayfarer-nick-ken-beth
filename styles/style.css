@@ -1,0 +1,86 @@
+body {
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+}
+
+.container {
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header {
+  display: inline-block;
+  background-image: url('../images/header.png');
+  height: 80px;
+  width: 80%;
+  background-size: 100% 100%;
+}
+
+.logo {
+  height: 80px;
+  display: inline-block;
+  float: left;
+  width: 30%;
+  text-align: justify;
+  color: white;
+}
+
+.logo img {
+  margin-left: 3%;
+  margin-top: 1%;
+  height: 80%;
+  display: inline-block;
+}
+
+.logo h2 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.signin {
+  height: 80px;
+  display: inline-block;
+  float: right;
+  width: 35%;
+}
+
+.signin button {
+  height: 50%;
+  margin: 5%;
+  border-radius: 5%;
+  border: 1px solid orange;
+  background-color: skyblue;
+  border-width: medium;
+}
+
+.fix {
+  clear: both;
+}
+
+.welcomeImage {
+  height: 500px;
+  width: 80%;
+  display: inline-block;
+}
+
+.welcomeImage img {
+  height: 100%;
+  width: 100%;
+}
+
+.topics {
+  display: inline-block;
+  width: 80%;
+}
+
+
+.topic {
+  display: inline-block;
+  width: 30%;
+  height: 250px;
+  margin: 0 1.5%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5%;
+  vertical-align: top;
+}
