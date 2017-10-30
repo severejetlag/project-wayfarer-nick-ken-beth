@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Galavant</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.css">
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.js" ></script>
     <!-- <script src="scripts/app.js"></script> -->
@@ -20,8 +22,8 @@
         </div>
         <div class="signin">
 
-          <button type="button" name="signin">Sign In</button>
-          <button type="button" name="signup">Sign Up</button>
+          <button class="button btn btn-warning" type="button" name="signin" data-toggle="modal" data-target="#exampleModal">Sign In</button>
+          <button class="button btn btn-warning" type="button" name="signup">Sign Up</button>
 
         </div>
 
@@ -60,5 +62,25 @@
       </div>
 
   </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

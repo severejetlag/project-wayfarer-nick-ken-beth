@@ -13,7 +13,7 @@ header {
   display: inline-block;
   background-image: url('../images/header.png');
   height: 80px;
-  width: 80%;
+  width: 100%;
   background-size: 100% 100%;
 }
 
@@ -35,7 +35,7 @@ header {
 
 .logo h2 {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .signin {
@@ -48,10 +48,17 @@ header {
 .signin button {
   height: 50%;
   margin: 5%;
-  border-radius: 5%;
-  border: 1px solid orange;
-  background-color: skyblue;
   border-width: medium;
+}
+
+.searchTerm {
+  height: 50%;
+  width: 50%;
+}
+
+.search img{
+  display: inline-block;
+  height: 20px;
 }
 
 .fix {
@@ -62,6 +69,7 @@ header {
   height: 500px;
   width: 80%;
   display: inline-block;
+  margin-top: 2%;
 }
 
 .welcomeImage img {
@@ -71,9 +79,12 @@ header {
 
 .topics {
   display: inline-block;
-  width: 80%;
+  width: 100%;
 }
 
+.title {
+  margin: 2% 0;
+}
 
 .topic {
   display: inline-block;
@@ -83,4 +94,90 @@ header {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 5%;
   vertical-align: top;
+}
+
+.profileBody {
+  margin-top: 4%;
+  width: 100%;
+  display: inline-block;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1%;
+}
+
+.profileBody-left {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  vertical-align: middle;
+  text-align: left;
+  margin-top: 2%;
+}
+
+.profileBody-left h1 {
+  margin: 15 0 0 10;
+}
+
+.userName h4 {
+  position: relative;
+  display: inline-block;
+  margin-top: 2%;
+}
+
+.currentCity h4 {
+  position: relative;
+  display: inline-block;
+  margin-top: 2%;
+}
+
+.joinDate h4 {
+  position: relative;
+  display: inline-block;
+  margin-top: 2%;
+}
+
+.editicon {
+  position: relative;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.profileBody-right {
+  display: inline-block;
+  width: 20%;
+  height: 70%;
+  vertical-align: middle;
+}
+.personalIcon{
+  position: relative;
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.personalEditicon {
+  position: relative;
+  height: 15px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.posts {
+  margin-top: 2%;
+  width: 100%;
+  display: inline-block;
+  background-image: url('../images/post.jpg');
+  border-radius: 1%;
+  background-size: 100% 100%;
+  color: white;
+}
+
+.post {
+  text-align: justify;
+  width: 60%;
+  display: inline-block;
+  color: white;
+  border-bottom: 2px solid white;
+  margin-bottom: 2%;
 }
