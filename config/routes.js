@@ -27,9 +27,6 @@ router.route('/')
 router.route('/signup')
 	.post(controllers.auth.signup)
 
-// router.route('/login')
-// 	.post(passport.authenticate('local'), controllers.auth.login)
-
 router.route('/login')
 	.post(authenticateUser, controllers.auth.login)
 
