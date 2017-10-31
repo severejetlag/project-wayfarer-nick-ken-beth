@@ -9,6 +9,10 @@ const PostSchema = new Schema ({
 	    type: Schema.Types.ObjectId,
 	    ref: 'User'
   	},
+  	_cityId: {
+	    type: Schema.Types.ObjectId,
+	    ref: 'City'
+  	},
 })
 
 const Post = mongoose.model('Post', PostSchema);

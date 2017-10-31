@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const Post = require('./post');
 
 const CitySchema = new Schema ({
-  	cityName: String
+  	name: String
 })
 
 const City = mongoose.model('City', CitySchema);
