@@ -11,15 +11,9 @@ let signup = (req, res) => {
 }
 
 let login = (req,res) => {
-	passport.authenticate('local')
-	console.log(JSON.stringify(req.user));
-  	res.send(req.user);
+	console.log(req.user);
+  	res.json(req.user);
 }
-
-// app.post('/login', , function (req, res) {
-//   console.log(JSON.stringify(req.user));
-//   res.send(req.user);
-// });
 
 module.exports = {
 	signup,
