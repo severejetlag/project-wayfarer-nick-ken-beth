@@ -106,11 +106,6 @@ header {
   margin-top: 2%;
 }
 
-.welcomeImage img {
-  height: 100%;
-  width: 100%;
-}
-
 .topics {
   display: inline-block;
   width: 100%;
