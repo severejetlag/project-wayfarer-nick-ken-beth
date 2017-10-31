@@ -21,14 +21,16 @@ let unAuthenticatedUser = (req, res, next) => {
 	return res.redirect('/');
 }
 
-router.route('/')
-  	.get(controllers.home.home)
-
-router.route('/signup')
+// Post request for Axios for signup
+router.route('/api/signup')
 	.post(controllers.auth.signup)
 
-router.route('/login')
+// Post request for Axios for login
+router.route('/api/login')
 	.post(authenticateUser, controllers.auth.login)
 
+// Handle city requests 
+router.route('/api/cities')
+	.get(controllers.cities.show)
 
 module.exports = router;
