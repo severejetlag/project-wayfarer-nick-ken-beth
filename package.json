@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/brwitten/project-wayfarer-nick-ken-beth#readme",
   "dependencies": {
+    "axios": "^0.17.0",
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3",

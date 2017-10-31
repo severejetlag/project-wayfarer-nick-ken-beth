@@ -18,16 +18,16 @@ class ModalContainer extends Component{
             </div>
 
             <div className="modal-body">
-              <form role="form">
+              <form role="form" onSubmit={this.props.handleLoginSubmit} >
                 <div className="form-group">
                   <label htmlFor="inputUsername">Username</label>
                     <input type="text" className="form-control"
-                    id="inputUsername" placeholder="Enter Username"/>
+                    id="inputUsername" placeholder="Enter Username" onInput={this.props.handleUsernameInput}/>
                 </div>
                 <div className="form-group">
                   <label htmlFor="inputPassword">Password</label>
                     <input type="password" className="form-control"
-                        id="inputPassword" placeholder="Password"/>
+                        id="inputPassword" placeholder="Password" onInput={this.props.handlePasswordInput}/>
                 </div>
                 <button type="submit" className="btn btn-default">Submit</button>
               </form>
