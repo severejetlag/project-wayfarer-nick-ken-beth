@@ -217,3 +217,13 @@ header {
   border-bottom: 2px solid white;
   margin-bottom: 2%;
 }
+
+.item {
+  max-width:960px;
+  max-height:500px;
+}
+
+.item img {
+  min-width:100%;
+  min-height: 400px;
+}

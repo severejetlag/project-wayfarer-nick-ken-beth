@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      username: '', 
+      username: '',
       password: '',
       isAuthed: false
     }
@@ -36,18 +36,18 @@ class App extends Component {
     return (
       <div className="App">
         <div className='container'>
-          <HeaderContainer 
+          <HeaderContainer
             isAuthed={this.state.isAuthed}
           />
           <main>
-            <Router routes = {routes} history={browserHistory}/>,
+            <Router routes = {routes} history={browserHistory}/>
           </main>
           <ModalContainer
             handleLoginSubmit={this.handleLoginSubmit.bind(this)}
             handleUsernameInput={this.handleUsernameInput.bind(this)}
             handlePasswordInput={this.handlePasswordInput.bind(this)}
           />
-        </div> 
+        </div>
       </div>
     );
   }
