@@ -4,13 +4,14 @@ import routes from './routes.js'
 import {Link} from 'react-router';
 import HeaderContainer from './containers/headerContainer'
 import ModalContainer from './containers/ModalContainer'
+import ProfileContainer from './containers/ProfileContainer'
 import AuthModel from './models/AuthModel'
 
 class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      username: '', 
+      username: '',
       password: '',
       isAuthed: false
     }
@@ -78,12 +79,12 @@ class App extends Component {
     return (
       <div className="App">
         <div className='container'>
-          <HeaderContainer 
+          <HeaderContainer
             isAuthed={this.state.isAuthed}
             handleLogoutSubmit={this.handleLogoutSubmit.bind(this)}
           />
           <main>
-            <Router routes = {routes} history={browserHistory}/>,
+            <Router routes = {routes} history={browserHistory}/>
           </main>
           <ModalContainer
             handleLoginSubmit={this.handleLoginSubmit.bind(this)}
@@ -91,7 +92,7 @@ class App extends Component {
             handlePasswordInput={this.handlePasswordInput.bind(this)} 
             handleSignupSubmit={this.handleSignupSubmit.bind(this)}
           />
-        </div> 
+        </div>
       </div>
     );
   }

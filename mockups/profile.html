@@ -8,7 +8,8 @@
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.js" ></script>
-    <!-- <script src="scripts/app.js"></script> -->
+    <script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.2.0/uploadcare.full.min.js"></script>
+    <script src="../scripts/app.js"></script>
 
     <link rel="stylesheet" href="styles/style.css">
 
@@ -55,8 +56,11 @@
           </div>
         </div>
         <div class="profileBody-right">
-          <img class="personalIcon" src="images/icon.jpg" alt="">
+          <img class="personalIcon" src="images/icon.jpg" alt="" height="150">
           <img class="personalEditicon" src="images/editicon.png" alt="">
+        </div>
+        <div id="img-upload">
+          <input type="hidden" role="uploadcare-uploader" name="content" data-public-key="be465b2b727bcd9151d0" data-images-only />
         </div>
       </div>
 
