@@ -4,7 +4,7 @@ import routes from './routes.js'
 import {Link} from 'react-router';
 import HeaderContainer from './containers/headerContainer'
 import ModalContainer from './containers/ModalContainer'
-// import AuthModel from './models/AuthModel'
+import AuthModel from './models/AuthModel'
 
 class App extends Component {
   constructor(props){
@@ -30,9 +30,8 @@ class App extends Component {
       username: this.state.username,
       password: this.state.password
     }
-    // AuthModel.login(authData).then( (res) => {
-    //   console.log(res)
-    // })
+    console.log(authData);
+    AuthModel.login(authData).then((res) => console.log(res))
   }
   render() {
     return (
