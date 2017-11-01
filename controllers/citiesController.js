@@ -1,8 +1,7 @@
 const db = require('../models')
 
 let show = (req,res) => {
-	let query = db.City.find({})
-	;
+	let query = db.City.find({});
 	query.exec((err, cities) => {
      	if(err){
             console.log(err);

@@ -4,7 +4,7 @@ const controllers = require('../controllers');
 const passport = require("passport");
 
 let authenticateUser = (req, res, next) => {
-	if (req.authenticate('local')) return next();
+	if (passport.authenticate('local')) return next();
 	// Otherwise
 	return res.json({error: 'Invalid username or password'});
 }
@@ -22,12 +22,8 @@ let unAuthenticatedUser = (req, res, next) => {
 }
 
 // Post request for Axios for signup
-router.route('/api/signup')
+router.route('/signup')
 	.post(controllers.auth.signup)
-
-// Post request for Axios for login
-router.route('/api/login')
-	.post(authenticateUser, controllers.auth.login)
 
 // Handle city requests 
 router.route('/api/cities')

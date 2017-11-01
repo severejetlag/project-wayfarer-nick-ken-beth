@@ -41,12 +41,23 @@ app.use(function (req, res, next) {
 });
 
 app.post('/login', passport.authenticate('local'), function (req, res) {
-  console.log(JSON.stringify(req.user));
+  console.log(req.user);
   res.send(req.user);
 });
 
+app.get('/logout', function (req, res) {
+  req.logout();
+  res.sendStatus(200);
+
+});
+
+app.use((req, res, next) => {
+  global.currentUser = req.user;
+  next();
+});
+
 // Use Config routes to move them out of Server.js
-const routes = require("./config/routes");
+var routes = require("./config/routes");
 app.use(routes);
 
 const port = process.env.API_PORT || 3001;

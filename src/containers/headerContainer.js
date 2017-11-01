@@ -28,8 +28,7 @@ class HeaderContainer extends Component{
 						<h2>Galavant</h2>
 					</div>
 					<div className="signin">
-          <button className="btn btn-info btn-lg btn3d" type="button" name="signout"><span className="glyphicon glyphicon-user"></span> Sign Out</button>
-
+          <button onClick={this.props.handleLogoutSubmit} className="btn btn-info btn-lg btn3d" type="button" name="signout"><span className="glyphicon glyphicon-user"></span> Sign Out</button>
 					</div>
 					<div className="fix"></div>
 				</header>
