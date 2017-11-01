@@ -29,7 +29,6 @@ class HeaderContainer extends Component{
 					</div>
 					<div className="signin">
           <button className="btn btn-info btn-lg btn3d" type="button" name="signout"><span className="glyphicon glyphicon-user"></span> Sign Out</button>
-
 					</div>
 					<div className="fix"></div>
 				</header>

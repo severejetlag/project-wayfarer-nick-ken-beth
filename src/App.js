@@ -25,12 +25,39 @@ class App extends Component {
   }
 
   handleLoginSubmit(event){
+    console.log("submitted") ;
     event.preventDefault()
     let authData = {
       username: this.state.username,
       password: this.state.password
     }
-    AuthModel.login(authData).then((res) => console.log(res))
+    AuthModel.login(authData)
+      .then((res) => {
+        console.log(res)
+        if(res.data.username === authData.username){
+          this.setState({isAuthed:true, password:''})
+        }else if(!res){
+          this.setState({isAuthed:false})
+        }
+        console.log(this.state)
+      })
+  }
+  handleSignupSubmit(event){
+    event.preventDefault()
+    let authData = {
+      username: this.state.username,
+      password: this.state.password
+    }
+    AuthModel.signup(authData)
+      .then((res) => {
+        console.log(res)
+        if(res.data.username === authData.username){
+          this.setState({isAuthed:true, password:''})
+        }else if(!res){
+          this.setState({isAuthed:false})
+        }
+        console.log(this.state)
+      })
   }
   render() {
     return (
@@ -45,7 +72,8 @@ class App extends Component {
           <ModalContainer
             handleLoginSubmit={this.handleLoginSubmit.bind(this)}
             handleUsernameInput={this.handleUsernameInput.bind(this)}
-            handlePasswordInput={this.handlePasswordInput.bind(this)}
+            handlePasswordInput={this.handlePasswordInput.bind(this)} 
+            handleSignupSubmit={this.handleSignupSubmit.bind(this)}
           />
         </div> 
       </div>
