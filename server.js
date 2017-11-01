@@ -46,7 +46,7 @@ app.post('/login', passport.authenticate('local'), function (req, res) {
 });
 
 // Use Config routes to move them out of Server.js
-const routes = require("./config/routes");
+var routes = require("./config/routes");
 app.use(routes);
 
 const port = process.env.API_PORT || 3001;
