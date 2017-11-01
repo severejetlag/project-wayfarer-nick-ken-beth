@@ -4,6 +4,7 @@ import routes from './routes.js'
 import {Link} from 'react-router';
 import HeaderContainer from './containers/headerContainer'
 import ModalContainer from './containers/ModalContainer'
+import ProfileContainer from './containers/ProfileContainer'
 import AuthModel from './models/AuthModel'
 
 class App extends Component {
