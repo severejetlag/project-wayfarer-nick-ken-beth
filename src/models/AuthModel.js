@@ -9,6 +9,10 @@ class AuthModel {
   		let request = axios.post('http://localhost:3001/signup', authData)
   		return request
   	}
+  	static logout(){
+  		let request	= axios.get('http://localhost:3001/logout')
+  		return request
+  	}
 }
 
 export default AuthModel

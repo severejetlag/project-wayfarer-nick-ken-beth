@@ -59,12 +59,28 @@ class App extends Component {
         console.log(this.state)
       })
   }
+  handleLogoutSubmit(event){
+    event.preventDefault()
+    console.log('Logging out')
+    AuthModel.logout()
+      .then((res) => {
+        console.log(res)
+        if(res.status === 200){
+          this.setState({
+            username: '',
+            password: '',
+            isAuthed: false
+          })
+        }
+      })
+  }
   render() {
     return (
       <div className="App">
         <div className='container'>
           <HeaderContainer 
             isAuthed={this.state.isAuthed}
+            handleLogoutSubmit={this.handleLogoutSubmit.bind(this)}
           />
           <main>
             <Router routes = {routes} history={browserHistory}/>,
