@@ -30,7 +30,6 @@ class App extends Component {
       username: this.state.username,
       password: this.state.password
     }
-    console.log(authData);
     AuthModel.login(authData).then((res) => console.log(res))
   }
   render() {

@@ -45,7 +45,7 @@ body {
 
 header {
   display: inline-block;
-  background-image: url('../images/header.png');
+  background-image: url('./images/header.png');
   height: 80px;
   width: 100%;
   background-size: 100% 100%;
@@ -203,7 +203,7 @@ header {
   margin-top: 2%;
   width: 100%;
   display: inline-block;
-  background-image: url('../images/post.jpg');
+  background-image: url('./images/post.jpg');
   border-radius: 1%;
   background-size: 100% 100%;
   color: white;
