@@ -45,7 +45,7 @@ body {
 
 header {
   display: inline-block;
-  background-image: url('./images/header.png');
+  background-image: url('../images/header.png');
   height: 80px;
   width: 100%;
   background-size: 100% 100%;
@@ -104,11 +104,6 @@ header {
   width: 80%;
   display: inline-block;
   margin-top: 2%;
-}
-
-.welcomeImage img {
-  height: 100%;
-  width: 100%;
 }
 
 .topics {
@@ -208,11 +203,10 @@ header {
   margin-top: 2%;
   width: 100%;
   display: inline-block;
-  background-image: url('./images/post.jpg');
+  background-image: url('../images/post.jpg');
   border-radius: 1%;
   background-size: 100% 100%;
   color: white;
-  margin-bottom: 5px;
 }
 
 .post {
@@ -222,25 +216,4 @@ header {
   color: white;
   border-bottom: 2px solid white;
   margin-bottom: 2%;
-}
-
-.city {
-  border: 1px solid black;
-  margin: 0px 10px 10px 10px;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 5%;
-  color: black;
-}
-.city-list,
-.selected-city {
-  border: 1px solid black;
-  margin: 5px;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.city-list-header,
-.selected-city-header {
-  padding: 15px;
-  margin-bottom: 10px;
 }
