@@ -7,7 +7,7 @@ class HomeContainer extends Component{
 
 	render(){
 		return(
-			<div>
+
 				<div className="welcomeImage">
 					<div id="myCarousel" className="carousel slide" data-ride="carousel">
 						<ol className="carousel-indicators">

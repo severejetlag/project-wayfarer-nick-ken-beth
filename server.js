@@ -45,6 +45,12 @@ app.post('/login', passport.authenticate('local'), function (req, res) {
   res.send(req.user);
 });
 
+app.get('/logout', function (req, res) {
+  req.logout();
+  res.sendStatus(200);
+
+});
+
 app.use((req, res, next) => {
   global.currentUser = req.user;
   next();
