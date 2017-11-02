@@ -4,6 +4,7 @@ import uploadcare from "uploadcare-widget"
 class UserImgUpload extends Component {
     componentDidMount() {
       const {onChange} = this.props;
+      console.log(this.props)
       const widget = uploadcare.Widget(this.uploader);
 
       if (onChange && typeof onChange === 'function') {
@@ -23,7 +24,7 @@ class UserImgUpload extends Component {
     render() {
       const {id, name, ...attrs} = this.props;
 
-      return (<input type="hidden" ref={input => this.uploader = input} id={id} name={name} {...attrs} />)
+      return (<input type="hidden" ref={input => this.uploader = input} id={id} name={name}/>)
     }
   }
 
