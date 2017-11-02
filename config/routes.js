@@ -29,7 +29,14 @@ router.route('/signup')
 router.route('/api/cities')
 	.get(controllers.cities.show)
 
+// API requests for specific city
+router.route('/api/cities/:id')
+	.get(controllers.cities.index)
+
+// Handle interactions with a particular user 
 router.route('/api/users/:id')
 	.get(controllers.users.index)
+
+
 
 module.exports = router;

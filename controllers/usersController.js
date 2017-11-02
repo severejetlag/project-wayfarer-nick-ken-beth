@@ -15,51 +15,15 @@ let index = (req,res) => {
                         res.status(500).send(err);
                         return;
                     }
-                    // Check is user is viewing their own page or someone elses or not logged in at all
-                    // if(!currentUser || foundUser.username !== currentUser.username.toString()){
-
-
-                        res.json({
-                            message: req.flash('errorMessage'), 
-                            user: foundUser, 
-                            posts: posts
-                        });
-                    // }else if(foundUser.username === currentUser.username.toString()){
-                    //    res.render(
-                    //     'currentUserUserProfile.ejs', 
-                    //     {
-                    //         message: req.flash('errorMessage'), 
-                    //         user: foundUser, 
-                    //         workspaceItems: workspaceItems
-                    //     }); 
-                    // }
-                });
+                    res.json({
+                        user: foundUser, 
+                        posts: posts
+                    });
+                })
         }else{
             res.send('user not found');
         }
     });
-}
-
-// GET Displays form page for updating basic profile information 
-let getEdit = (req,res) => {
-    // let username = req.params.username;
-    // if(username === currentUser.username.toString()){
-    //     db.User.findOne({username: username}, (err, foundUser) => {
-    //         if (err) {
-    //             console.log(err);
-    //             return;
-    //         }
-    //         res.render(
-    //             'userProfileEdit.ejs', 
-    //             {
-    //                 message: req.flash('errorMessage'), 
-    //                 user: foundUser
-    //             });
-    //     });
-    // } else {
-    //     res.redirect('/');
-    // }
-
 }
 
 // PUT Saves the updated information from the edit page. 
@@ -82,6 +46,5 @@ let postEdit = (req,res) => {
 
 module.exports = {
     index,
-    getEdit,
     postEdit
 }
