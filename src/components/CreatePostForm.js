@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 
 class CreatePostForm extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
+    console.log("PROPS: ", this.props);
     this.state = {
       postTitle:'',
       post:''
