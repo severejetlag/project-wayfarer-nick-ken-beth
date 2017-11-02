@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import editicon from '../images/editicon.png'
 import searchButton from '../images/searchicon.png'
 import personalIcon from '../images/icon.jpg'
+import UserImgUpload from '../components/UserImgUpload.js'
 
 
 class ProfileContainer extends Component{
@@ -33,6 +34,7 @@ class ProfileContainer extends Component{
       <div className="profileBody-right">
         <img className="personalIcon" src={personalIcon} alt=""/>
         <img className="personalEditicon" src={editicon} alt=""/>
+        <UserImgUpload />
       </div>
     </div>
 

@@ -25,8 +25,19 @@ let unAuthenticatedUser = (req, res, next) => {
 router.route('/signup')
 	.post(controllers.auth.signup)
 
-// Handle city requests 
+// Handle city requests
 router.route('/api/cities')
 	.get(controllers.cities.show)
+
+// API requests for specific city
+router.route('/api/cities/:id')
+	.get(controllers.cities.index)
+
+// Handle interactions with a particular user
+router.route('/api/users/:id')
+	.get(controllers.users.index)
+
+router.route('/api/posts')
+	.post(controllers.posts.create)
 
 module.exports = router;
