@@ -13,6 +13,7 @@ class PostContainer extends Component {
     </div>
     createPost(post) {
       let newPost = {
+        title: postTitle,
         body: post
       }
       PostModel.create(newPost).then((res) => {
