@@ -29,4 +29,7 @@ router.route('/signup')
 router.route('/api/cities')
 	.get(controllers.cities.show)
 
+router.route('/api/users/:id')
+	.get(controllers.users.index)
+
 module.exports = router;
