@@ -5,6 +5,7 @@ class CreatePostForm extends Component {
     super(props)
     console.log("PROPS: ", this.props);
     this.state = {
+      user: '59fb4641ea5a6337afc48daf',
       city:'59fb4641ea5a6337afc48db2',
       postTitle:'',
       post:''
@@ -26,10 +27,12 @@ class CreatePostForm extends Component {
     let postBody = this.state.post
     let postTitle = this.state.postTitle
     let postCityId = this.state.city
+    let postUser = this.state.user
     let fullPost = {
-      postBody,
+      postUser,
       postCityId,
-      postTitle
+      postTitle,
+      postBody
     }
     this.props.createPost(fullPost)
   }
