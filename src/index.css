@@ -201,6 +201,7 @@ header {
 
 .posts {
   margin-top: 2%;
+  margin-bottom: 2%;
   width: 100%;
   display: inline-block;
   background-image: url('./images/post.jpg');
@@ -226,4 +227,85 @@ header {
 .item img {
   min-width:100%;
   min-height: 400px;
+}
+
+.city-list {
+  background-color: rgba(100, 100, 100, 0.5);
+  margin-top: 2%;
+  border-radius: 5%;
+  display: inline-block;
+  margin-right: 1%;
+  width: 24%;
+}
+
+.city {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid grey;
+  margin: 0 auto;
+  border-radius: 15%;
+  margin-bottom: 5%;
+  cursor:pointer;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7) inset, 0 0 0 2px rgba(255, 255, 255, 0.7) inset, 0 2px 0 0 rgba(255, 255, 255, 0.7), 0 5px 5px 1px rgba(255, 255, 255, 0.7);
+}
+
+.city:active,
+.city.active {
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7) inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+	background-color: white;
+}
+
+.city img {
+  height: 25px;
+  margin-top: 3%;
+}
+
+.selected-city {
+  background-color: rgba(0, 100, 100, 0.5);
+  margin-top: 2%;
+  border-radius: 5%;
+  display: inline-block;
+}
+
+.selected-city-header {
+  height: 300px;
+}
+
+.selected-city-name {
+  margin-top: 2%
+}
+
+.selected-city-name h1 {
+  font-weight: bold;
+}
+
+.selected-city-img {
+  margin-top: 2%
+}
+
+.button-post {
+  border-radius: 50% 50% 50% 50%;
+  box-shadow: 0 0 0 1px darkorange inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 2px 0 0 darkorange, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+  background-color: orange;
+}
+
+.button-post:active,
+.button-post.active {
+	box-shadow: 0 0 0 1px darkorange inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+	background-color: orange;
+}
+
+.button-post span{
+  color: white;
+  font-size: 24px;
+  padding: auto;
+}
+
+.button-left {
+  text-align: left;
+}
+
+.button-left label {
+  color: white;
+  font-size: 20px;
+  margin-left: 1%;
 }

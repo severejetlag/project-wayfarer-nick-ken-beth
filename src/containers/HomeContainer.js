@@ -7,7 +7,7 @@ class HomeContainer extends Component{
 
 	render(){
 		return(
-
+			<div>
 				<div className="welcomeImage">
 					<div id="myCarousel" className="carousel slide" data-ride="carousel">
 						<ol className="carousel-indicators">
@@ -58,24 +58,20 @@ class HomeContainer extends Component{
 					<div className="topic topic1">
 						<h2>Topic</h2>
 						<p>We are the Best Team!!!!!</p>
-
 					</div>
 
 					<div className="topic topic2">
 						<h2>Topic</h2>
 						<p>Oh Yes We Are!!!!</p>
-
 					</div>
 
 					<div className="topic topic3">
 						<h2>Topic</h2>
 						<p>Ran Out Of Words!!!!!</p>
-
 					</div>
 
 				</div>
-
-		</div>
+			</div>
 		)
 	}
 }
