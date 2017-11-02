@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import searchButton from '../images/searchicon.png'
+import CreatePostForm from '../components/CreatePostForm.js'
 
 class CitiesContainer extends Component{
 	render(){
@@ -36,8 +37,7 @@ class CitiesContainer extends Component{
 											<img className="col-md-6 selected-city-img"src="http://www.capoliticalreview.com/wp-content/uploads/2014/11/San-Francisco.jpg" height="250"/>
 										</div>
 									<div className="button-left">
-										<button className=" btn3d btn button-post" type="button" name="signout"><span>+</span></button>
-										<label htmlFor="button-post">Create new post</label>
+										<CreatePostForm />
 									</div>
 									<div className="posts">
 										<h1>Posts</h1>

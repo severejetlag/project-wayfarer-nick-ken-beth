@@ -69,8 +69,7 @@ class CreatePostForm extends Component {
           </form>
         </div>
       )
-    )
+    }
   }
-}
 
 export default CreatePostForm
