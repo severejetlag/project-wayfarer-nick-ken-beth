@@ -7,6 +7,8 @@ const express = require('express'),
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
     db = require('./models');
+const flash = require('connect-flash');
+    
 
 //to config API to use body body-parser and look for JSON in req.body
 app.use(bodyParser.urlencoded({
@@ -22,6 +24,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
 
 //passport config
 passport.use(new LocalStrategy(db.User.authenticate()));
