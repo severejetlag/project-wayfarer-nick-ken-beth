@@ -12,14 +12,11 @@ class PostContainer extends Component {
     this.createPost = this.createPost.bind(this)
   }
 
-  createPost(taco) {
-    let newPost = {
-      title: taco.postTitle,
-      body: taco.post
-    }
-    console.log("I'm a NEW POST: ", taco);
-    PostModel.create(newPost)
+  createPost(fullPost) {
+    console.log("post body: "+fullPost.postBody)
+    PostModel.create(fullPost)
     .then(res => {
+      console.log(res);
       let posts = this.state.posts
       let newPosts = posts.push(res.data)
       this.setState({newPosts})

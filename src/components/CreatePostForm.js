@@ -5,18 +5,17 @@ class CreatePostForm extends Component {
     super(props)
     console.log("PROPS: ", this.props);
     this.state = {
+      city:'59fb4641ea5a6337afc48db2',
       postTitle:'',
       post:''
     }
   }
   onTitleInputChange(event){
-    console.log("Title changed to: "+this.state.postTitle);
     this.setState({
       postTitle: event.target.value
     })
   }
   onBodyInputChange(event){
-    console.log("Body changed to: "+this.state.post);
     this.setState({
       post: event.target.value
     })
@@ -24,12 +23,15 @@ class CreatePostForm extends Component {
   onFormSubmit(event){
     event.preventDefault()
     console.log("onFormSubmit called");
-    let post = this.state.post
+    let postBody = this.state.post
     let postTitle = this.state.postTitle
-    this.props.createPost(post)
-    this.setState({
-      post: ''
-    })
+    let postCityId = this.state.city
+    let fullPost = {
+      postBody,
+      postCityId,
+      postTitle
+    }
+    this.props.createPost(fullPost)
   }
   render(){
       return (

@@ -3,8 +3,8 @@ let endpoint = `http://localhost:3001/`
 
 class AuthModel {
 
-    static create(post) {
-      let request = axios.post(`${endpoint}posts`)
+    static create(newPost) {
+      let request = axios.post(`${endpoint}api/posts`, newPost)
       return request
     }
 }
