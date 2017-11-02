@@ -2,7 +2,15 @@ import React, {Component} from 'react'
 import CreatePostForm from '../components/CreatePostForm.js'
 
 class PostContainer extends Component {
+  constructor() {
+    super()
+    this.state =
+      posts: []
+  }
   render() {
+    <div>
+      <CreatePostForm />
+    </div>
     createPost(post) {
       let newPost = {
         body: post
