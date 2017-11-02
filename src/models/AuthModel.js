@@ -1,7 +1,7 @@
 import axios from 'axios'
+let endpoint = `http://localhost:3001/`
 
 class AuthModel {
-    let endpoint = `http://localhost:3001/`
   	static login(authData){
     	let request = axios.post(`${endpoint}login`, authData)
     	return request
