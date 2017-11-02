@@ -58,7 +58,7 @@ class App extends Component {
       .then((res) => {
         console.log(res)
         if(res.data.username === authData.username){
-          this.setState({isAuthed:true, password:''})
+          this.setState({isAuthed:true})
         }else if(!res){
           this.setState({isAuthed:false})
         }
@@ -87,14 +87,15 @@ class App extends Component {
           <HeaderContainer
             isAuthed={this.state.isAuthed}
             handleLogoutSubmit={this.handleLogoutSubmit.bind(this)}
-          />
+            />
+            {this.state.isAuthed===true ? <ProfileContainer /> : console.log('Not login')}
           <main>
             <Router isAuthed={this.state.isAuthed} routes = {routes} history={browserHistory}/>
           </main>
           <ModalContainer
             handleLoginSubmit={this.handleLoginSubmit.bind(this)}
             handleUsernameInput={this.handleUsernameInput.bind(this)}
-            handlePasswordInput={this.handlePasswordInput.bind(this)} 
+            handlePasswordInput={this.handlePasswordInput.bind(this)}
             handleSignupSubmit={this.handleSignupSubmit.bind(this)}
           />
         </div>
