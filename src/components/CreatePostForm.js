@@ -21,7 +21,6 @@ class CreatePostForm extends Component {
     })
   }
   render(){
-    return (
       return (
         <div classNameName='createForm todoForm'>
           <button className="btn btn-info btn-lg btn3d" type="button" name="signin" data-toggle="modal" data-target="#newPost">Create New Post</button>
