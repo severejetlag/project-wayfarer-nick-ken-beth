@@ -9,9 +9,12 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.js" ></script>
     <script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.2.0/uploadcare.full.min.js"></script>
+    <script>
+    UPLOADCARE_PUBLIC_KEY='be465b2b727bcd9151d0';
+    </script>
     <script src="../scripts/app.js"></script>
 
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../src/index.css">
 
   </head>
   <body>
@@ -22,7 +25,6 @@
           <h2>Galavant</h2>
         </div>
         <div class="signin">
-
 
           <button class="btn btn-info btn-lg btn3d" type="button" name="signout"><span class="glyphicon glyphicon-user"></span> Sign Out</button>
 
@@ -68,7 +70,7 @@
         <h1>Posts</h1>
 
 <!-- create new post button -->
-        <button class="btn btn-info btn-lg btn3d" type="button" name="newPost" data-toggle="modal" data-target="#newPost">Create New Post</button>
+          <button class="btn btn-info btn-lg btn3d" type="button" name="signin" data-toggle="modal" data-target="#newPost">Sign In</button>
 
         <div class="modal fade" id="newPost" role="dialog">
           <div class="modal-dialog">
@@ -116,16 +118,6 @@
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
 
 
 
