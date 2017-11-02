@@ -1,21 +1,30 @@
 import React, {Component} from 'react'
+import uploadcare from "uploadcare-widget"
 
 class UserImgUpload extends Component {
-  componentDidMount() {
-    const script = document.createElement("script");
+    componentDidMount() {
+      const {onChange} = this.props;
+      const widget = uploadcare.Widget(this.uploader);
 
-      const scriptText = document.createTextNode("src=https://ucarecdn.com/libs/widget/3.2.0/uploadcare.full.min.js");
+      if (onChange && typeof onChange === 'function') {
+        widget.onChange((file) => {
+          if (file) {
+            file
+              .done(info => onChange(info.cdnUrl))
+              .fail(() => onChange(null))
+          }
+          else {
+            onChange(null)
+          }
+        })
+      }
+    }
 
-      script.appendChild(scriptText);
-      document.head.appendChild(script);
+    render() {
+      const {id, name, ...attrs} = this.props;
+
+      return (<input type="hidden" ref={input => this.uploader = input} id={id} name={name} {...attrs} />)
+    }
   }
-  render() {
-    return (
-      <div>
-        <h4>IMG UPLOAD TEST</h4>
-      </div>
-    )
-  }
-}
 
 export default UserImgUpload
