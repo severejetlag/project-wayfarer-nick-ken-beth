@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
 
 
-
     <script src="https://code.jquery.com/jquery-3.2.1.js" ></script>
     <script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.2.0/uploadcare.full.min.js"></script>
     <script>
@@ -72,7 +71,7 @@
         <h1>Posts</h1>
 
 <!-- create new post button -->
-          <button class="btn btn-info btn-lg btn3d" type="button" name="signin" data-toggle="modal" data-target="#newPost">Sign In</button>
+        <button class="btn btn-info btn-lg btn3d" type="button" name="signin" data-toggle="modal" data-target="#newPost">Create New Post</button>
 
         <div class="modal fade" id="newPost" role="dialog">
           <div class="modal-dialog">
@@ -85,7 +84,7 @@
                          <span class="sr-only">Close</span>
                   </button>
                   <h4 class="modal-title" id="myModalLabel">
-                      Sign In
+                      Create New Post
                   </h4>
               </div>
 
@@ -95,8 +94,15 @@
                   <form role="form">
                     <div class="form-horizontal">
                       <div class="form-group">
-                        <div class="col-md-6">
-                          <textarea class="form-control" rows="3" placeholder="Write post here..." required></textarea>
+                        <div class="col-md-12">
+                          <textarea class="form-control" rows="1" placeholder="Post Title" required></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-horizontal">
+                      <div class="form-group">
+                        <div class="col-md-12">
+                          <textarea class="form-control" rows="5" placeholder="Write post details..." required></textarea>
                         </div>
                       </div>
                     </div>
@@ -106,22 +112,14 @@
 
               <!-- Modal Footer -->
               <div class="modal-footer">
-                  <button type="button" class="btn btn-default"
-                          data-dismiss="modal">
-                              Close
+                  <button type="button" class="btn btn-default" data-dismiss="modal"> Close
                   </button>
               </div>
-
-
-<!-- modal typing space -->
-
-
-
           </div>
         </div>
       </div>
 
-
+<br>
 
         <div class="post">
           <h3>Post Date: Post Title</h3>
