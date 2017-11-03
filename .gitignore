@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/mockups
+ /.DS_Store
 
 # testing
 /coverage
